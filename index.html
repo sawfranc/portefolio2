@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      .hero {
+        height: 100vh;
+        background: linear-gradient(to right, #0d6efd, #6610f2);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .profile-img {
+        width: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-bottom: 20px;
+      }
+      .section {
+        padding: 80px 0;
+      }
+      .project-card:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+      }
+      .icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: #0d6efd;
+      }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="apple-touch-icon" href="icon-192.png">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">MonPortfolio</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Compétences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div>
+        <!-- Remplace profile.jpg par ta photo -->
+        <img src="profile.jpg" alt="Photo" class="profile-img" />
+        <h1>Bonjour, je suis Stéphane</h1>
+        <p><i class="fa-solid fa-code"></i> Développeur Web & Mobile</p>
+        <a href="#contact" class="btn btn-light mt-3">Me contacter</a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Mes Compétences</h2>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <i class="fa-brands fa-html5 icon"></i>
+            <h5>HTML / CSS</h5>
+          </div>
+          <div class="col-md-3">
+            <i class="fa-brands fa-js icon"></i>
+            <h5>JavaScript</h5>
+          </div>
+          <div class="col-md-3">
+            <i class="fa-brands fa-php icon"></i>
+            <h5>PHP / MySQL</h5>
+          </div>
+          <div class="col-md-3">
+            <i class="fa-brands fa-bootstrap icon"></i>
+            <h5>Bootstrap</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="text-center mb-5">Mes Projets</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card project-card">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5><i class="fa-solid fa-laptop-code"></i> Projet 1</h5>
+                <p>Application web de gestion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5><i class="fa-solid fa-cart-shopping"></i> Projet 2</h5>
+                <p>Site e-commerce.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card">
+              <img
+                src="https://via.placeholder.com/400x200"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5><i class="fa-solid fa-mobile-screen"></i> Projet 3</h5>
+                <p>Application mobile PWA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-dark text-white">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <form class="w-50 mx-auto">
+          <input class="form-control mb-3" placeholder="Nom" />
+          <input class="form-control mb-3" placeholder="Email" />
+          <textarea class="form-control mb-3" placeholder="Message"></textarea>
+          <button class="btn btn-primary w-100">
+            <i class="fa-solid fa-paper-plane"></i> Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+        }
+        </script>
+  </body>
+</html>
